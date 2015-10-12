@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Gem of True Sight",
+    "description": "Reveals Invisible entities to the weilder!",
+    "shine": 60,
+    "price": 900.50,
+    "rarity": 4,
+    "color": "#CCC",
+    "faces": 14,
+    "images": [
+      "images/gem-02.gif",
+      "images/gem-05.gif",
+      "images/gem-09.gif"
+    ],
+    "reviews": []
+  },
+  {
+    "name": "Bloodstone",
+    "description": "Increased Mana and Health Regen",
+    "shine": 500,
+    "price": 4900,
+    "rarity": 12,
+    "color": "#EEE",
+    "faces": 12,
+    "images": [
+      "images/gem-01.gif",
+      "images/gem-03.gif",
+      "images/gem-04.gif"
+    ],
+    "reviews": []
+  },
+  {
+    "name": "Void Stone",
+    "description": "100% Increased Mana Regeneration!",
+    "shine": 100,
+    "price": 3200,
+    "rarity": 7,
+    "color": "#000",
+    "faces": 6,
+    "images": [
+      "images/gem-06.gif",
+      "images/gem-07.gif",
+      "images/gem-08.gif"
+    ],
+    "reviews": []
+  }
+]
