@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ruby:
+  name: Ruby
+  description: A redish stone
+  shine: 5
+  price: 4.4
+  rarity: 12
+  color: Red-ish
+  faces: 12
+
+emerald:
+  name: Emerald
+  description: sometimes red things are grey
+  shine: 3
+  price: 2.5
+  rarity: 8
+  color: red-ish grey
+  faces: 9

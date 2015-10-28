@@ -1,7 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Gemstone.create!(name: 'Ruby', price: 33.53)
+Gemstone.create!(name: 'Topaz', price: 36.63)
+Gemstone.create!(name: 'Emerald', price: 34.32)
+Gemstone.create!(name: 'Diamond', price: 32.34)

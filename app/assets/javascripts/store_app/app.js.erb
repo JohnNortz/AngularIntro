@@ -1,23 +1,42 @@
+//= require_self
 //= require ./products
+//= require ./controllers/store_ctrl.js
 
 (function() {
-  var app = angular.module('store', ['store-directives']);
+  var app = angular.module('StoreApp', ['store-directives']);
 
-  app.controller('StoreController', [ '$http', function($http){
-    var store = this;
-    store.products = [];
+  app.config(['$httpProvider', function($httpProvider) {
+    $httpProvider.defaults.headers.common['X-CSRF-Token'] = document.querySelector('meta[name=csrf-token]').attr('content');
+    $httpProvider.defaults.headers.common.Accept = 'application/json';
+  }]);
 
-    $http.get('<%= asset_path "store_app/products/store-products.json" %>').success(function(data){
-      store.products = data;
+  app.controller('StoreController', ['$scope', '$http', function() {
+    $scope.products = [];
+
+    $http.get("/products").success(function(data) {
+      $scope.products = data.products;
+      console.log($scope.products);
     });
+  }]);
+
+  app.controller('StoreController', ['$scope', '$http', function($scope, $http) {
+    $scope.product = {};
+
+    this.create = function(product){
+      $http.post("/products", {product: product }).success(function(data) {
+        $scope.products.unshift(data.product);
+        console.log($scope);
+        $scope.newProduct = {};
+      });
+    }
   }]);
 
   app.controller('ReviewController', function() {
     this.review = {};
 
     this.addReview = function(product) {
+      this.review.createdon = Date.now();
       product.reviews.push(this.review);
-
       this.review = {};
     };
   });
