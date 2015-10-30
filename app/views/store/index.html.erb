@@ -4,10 +4,10 @@
 </header>
 
 <section>
-<form name="productForm" ng-controller="productsController as productCtrl" ng-submit="product.Ctrl.create(newProduct)">
-  <input type="text" name="name" ng-model="newGemstone.name">
-  <input type="text" name="price" ng-model="newGemstone.price">
-  <input type="text" name="description" ng-model="newGemstone.description">
+<form name="productForm" ng-controller="StoreController as productCtrl" ng-submit="product.Ctrl.create(newProduct)">
+  Name: <input type="text" name="name" ng-model="newGemstone.name">
+  Price: <input type="text" name="price" ng-model="newGemstone.price">
+  Description: <input type="text" name="description" ng-model="newGemstone.description">
   <button ng-click="create(newGemstone)">Create Gemstone</button>
 </section>
 

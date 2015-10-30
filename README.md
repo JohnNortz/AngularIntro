@@ -16,3 +16,13 @@ PATCH/PUT:
 DELETE:
                curl -X DELETE http://CodeSchoolAngular.dev/gemstones/[Index Number]
 
+
+
+
+Refrences:
+
+  Brook Riggio's in class demonstrations
+
+  Brian Ray's Help with API calls and Debugging CRUD functionality
+
+  [And any other students whose work was demonstrated during Code Fellow's lectures]
