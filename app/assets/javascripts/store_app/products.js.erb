@@ -4,28 +4,28 @@
   app.directive("productDescription", function() {
     return {
       restrict: 'E',
-      templateUrl: '<%= asset_path "store_app/products/templates/description.html" %>'
+      templateUrl: "<%= asset_path('templates/description.html.erb') %>"
     };
   });
 
   app.directive("productReviews", function() {
     return {
       restrict: 'E',
-      templateUrl: '<%= asset_path "store_app/products/templates/reviews.html" %>'
+      templateUrl: "<%= asset_path('templates/reviews.html.erb') %>"
     };
   });
 
   app.directive("productSpecs", function() {
     return {
       restrict:"A",
-      templateUrl: '<%= asset_path "store_app/products/templates/specs.html" %>'
+      templateUrl: "<%= asset_path('templates/specs.html.erb') %>"
     };
   });
 
   app.directive("productTabs", function() {
     return {
       restrict: "E",
-      templateUrl: '<%= asset_path "store_app/products/templates/tabs.html" %>',
+      templateUrl: "<%= asset_path('templates/tabs.html.erb') %>",
       controller: function() {
         this.tab = 1;
 
@@ -44,7 +44,7 @@
   app.directive("productGallery", function() {
     return {
       restrict: "E",
-      templateUrl: '<%= asset_path "store_app/products/templates/gallery.html" %>',
+      templateUrl: "<%= asset_path('templates/gallery.html.erb') %>",
       controller: function() {
         this.current = 0;
         this.setCurrent = function(imageNumber){

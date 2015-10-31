@@ -20,7 +20,7 @@
     };
 
     $scope.update = function (gemstone) {
-      $http.patch( "gemstones/" + gemstone.id,
+      $http.put( "gemstones/" + gemstone.id,
         {gemstone: gemstone} )
       .success(function(data) {
         //console.log(gemstone)

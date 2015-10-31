@@ -1,5 +1,6 @@
 //= require_self
 //= require ./products
+//= require products.js.erb
 //= require ./controllers/store_ctrl.js
 
 (function() {
@@ -10,7 +11,7 @@
     $httpProvider.defaults.headers.common.Accept = 'application/json';
   }]);
 
-  app.controller('StoreController', ['$scope', '$http', function() {
+  app.controller('StoreController', ['$scope', '$http', function($scope, $http) {
     $scope.products = [];
 
     $http.get("/products").success(function(data) {
